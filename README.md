@@ -15,24 +15,18 @@ let config = {
   max: max, // maximum value to be displayed
   minorTicks: 5, // interval between values
   // zones to filled with colors, intervals must contain from and to
-  greenZones:[
-      {
-          from: 0, 
-          to: 30
-      }
-  ],
-  yellowZones:[
-      {
-          from: 30,
-          to: 90
-      }
-  ],
-  redZones:[
-      {
-          from: 90,
-          to: 100
-      }
-  ]
+  greenZones: {
+    from: 0,
+    to: 50
+  },
+  yellowZones: {
+    from: 50,
+    to: 90
+  },
+  redZones: {
+    from: 90,
+    to: 100
+  }
 }				
 ```
 
