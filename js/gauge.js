@@ -48,14 +48,19 @@ function Gauge(placeholderName, configuration) {
             .style("fill", "#fff")
             .style("stroke", "#e0e0e0")
             .style("stroke-width", "2px");
+        
+        if (this.config.greenZones){
+            this.drawBand(this.config.greenZones.from, this.config.greenZones.to, self.config.greenColor);
+        }
+        
+        if (this.config.yellowZones){
+            this.drawBand(this.config.yellowZones.from, this.config.yellowZones.to, self.config.yellowColor);
+        }
 
-
-        this.drawBand(this.config.greenZones[0].from, this.config.greenZones[0].to, self.config.greenColor);
-
-        this.drawBand(this.config.yellowZones[0].from, this.config.yellowZones[0].to, self.config.yellowColor);
-
-        this.drawBand(this.config.redZones[0].from, this.config.redZones[0].to, self.config.redColor);
-
+        if (this.config.redZones){
+            this.drawBand(this.config.redZones.from, this.config.redZones.to, self.config.redColor);
+        }
+        
         if (undefined != this.config.label) {
             var fontSize = Math.round(this.config.size / 9);
             this.body.append("svg:text")
