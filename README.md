@@ -1,5 +1,10 @@
 # Google-Gauge-D3
-This is a gauge styled graphic based in Tomer Doron’s with a few modifications and improvements. 
+This is a graphic gauge styled based in [Tomer Doron’s](http://bl.ocks.org/tomerd/1499279) with a few modifications and improvements. It is also an implementation of [Google's gauge chart](https://developers.google.com/chart/interactive/docs/gallery/gauge).
+
+# Usage
+![alt Gauge Chart](https://i1.wp.com/blog.novatrend.ch/wp-content/uploads/2018/01/01-gauge.gif?fit=747%2C271&ssl=1)
+
+To use this gauge you must have gauge.js and d3 library imported to your application. An example can be found in index.html.
 
 # Config Example
 ```
@@ -31,7 +36,7 @@ let config = {
 }				
 ```
 
-# Usage
+# Usage Example
 ```
 var gauge = new Gauge( "GaugeContainer", config); // where GaugeContainer is the id of the div in html
 gauge.render();
